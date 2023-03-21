@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/server
+hooks:
+  AfterInstall:
+    - location: scripts/npm-install.sh
+      runas: ubuntu
+      timeout: 600
